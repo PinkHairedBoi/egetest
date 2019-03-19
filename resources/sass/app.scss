@@ -1,0 +1,25 @@
+// Bulma
+@import '~bulma/bulma.sass';
+@import "~font-awesome/scss/font-awesome.scss";
+@import '~buefy/dist/buefy.css';
+
+.modal-background {
+    background-color: rgba(10, 10, 10, 0.2);
+}
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+$widthAmounts: (2, 10, 1, 12, 8, 4);
+$widthUnit: "em";
+
+@each $width in $widthAmounts {
+    $i: index($widthAmounts, $width);
+
+    .table thead th.is-#{$i} {
+        width: #{$width}#{$widthUnit} !important;
+        max-width: #{$width}#{$widthUnit} !important;
+    }
+}
